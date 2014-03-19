@@ -30,7 +30,7 @@ module.exports = function bruteForce (capacity, values, weights) {
         value  = 0;
 
     for (var i = 0;  i < items; i++) {
-      if (weight + sortedAvarages[i].weight <= capacity) {
+      if  (weight + sortedAvarages[i].weight <= capacity) {
         var last = i;
         value  += values[i];
         weight += weights[i];
