@@ -2,8 +2,8 @@ var fs = require('fs');
 var path = require('path');
 var events = require("events");
 var printResult = require("./printResult");
-//var alogirtm = require("./greedyAlgoritm");
-var alogirtm = require("./algorithms/branchAndBunchRelax");
+//var alogirtm = require("./algorithms/greedyAlgoritm");
+var alogirtm = require("./algorithms/branchAndBunchRelaxWithSort");
 
 process.argv.forEach(function (val, index, array) {
   if(val.indexOf("-file=")> -1) {
