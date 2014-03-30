@@ -7,8 +7,8 @@ var alogirtm = require("./algorithms/simple_1");
 
 process.argv.forEach(function (val, index, array) {
   if(val.indexOf("-file=")> -1) {
-     fileName = val.substring(6);
-   } 
+    fileName = val.substring(6);
+  }
 });
 
 var lines= [];

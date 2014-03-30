@@ -10,4 +10,4 @@ module.exports = function bruteForce (vertexesCount, adgesCount, values) {
     value: vertexesCount,
     taken: result
   };
-}
+};
