@@ -64,12 +64,11 @@ module.exports = function bruteForce (vertexesCount, adgesCount, values) {
       colors = cr;
     }
 
-
     setValueInAvailableColors(vertex, false);
   }
 
   return {
-    value: colors,
+    value: colors + 1,
     taken: result
   };
 };
