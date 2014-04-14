@@ -3,7 +3,7 @@ var path = require('path');
 var events = require("events");
 var printResult = require("./printResult");
 //var alogirtm = require("./algorithms/greedyAlgoritm");
-var alogirtmOptimal = require("./algorithms/brootforce");
+var alogirtmOptimal = require("./algorithms/own_solution_1");
 var alogirtm = require("./algorithms/simple_1");
 
 process.argv.forEach(function (val, index, array) {
@@ -37,7 +37,8 @@ var readFile = fs.readFileSync(fileName, { encoding: 'utf8' })
 });
 
 var greedyResult = alogirtm (vertexesCount, adgesCount, values);
-var optimalResult = alogirtmOptimal (vertexesCount, adgesCount, values, greedyResult.value -  0.05 * greedyResult.value);
+//printResult(greedyResult);  
+var optimalResult = alogirtmOptimal (vertexesCount, adgesCount, values, greedyResult);
 
 var result = typeof optimalResult.tacken === 'undefined' ?  greedyResult : optimalResult;
 

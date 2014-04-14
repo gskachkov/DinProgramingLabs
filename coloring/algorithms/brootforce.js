@@ -27,7 +27,9 @@ module.exports = function bruteForce (vertexesCount, adgesCount, values, greedyR
     while (!cr) {
       ++currentColor;
 
-      if (currentColor >= vertexesCount - 1 || currentColor >= greedyResult - 1) {
+      if (currentColor >= vertexesCount - 1
+       || currentColor > index  
+       || currentColor >= greedyResult - 1) {
         return undefined;
       }
 
