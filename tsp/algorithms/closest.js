@@ -2,7 +2,6 @@ var utils = require("./utils")();
 
 module.exports = function bruteForce (pointCount, points) {
 
-
   var result = [],
     distance = 0;
 

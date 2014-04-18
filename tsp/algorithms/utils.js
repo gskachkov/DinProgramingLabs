@@ -15,13 +15,31 @@ module.exports = function utils () {
     for (var i = 1; i < len; i++) {
       distance += pointsDistance(points[path[i-1]], points[path[i]]);
     }
-
+    
     return distance;
+  };
+
+  var findClosestPoint = function (points, zeroPoint) {
+    var closestDistance = 1000000000,
+      selectedPoint,
+      selectedIndex,
+      len = points.length;
+
+    for (var i = 0; i <  len; i++) {
+      var distance = pointsDistance(zeroPoint, points[i]);
+      if (closestDistance >  distance) {
+        closestDistance = distance;
+        selectedPoint = points[i];
+      }
+    }
+
+    return selectedPoint;
   };
  
   return {
     sqr               : sqr,
     pointsDistance    : pointsDistance,
-    findWholeDistance : findWholeDistance
+    findWholeDistance : findWholeDistance,
+    findClosestPoint  : findClosestPoint
   };
 };

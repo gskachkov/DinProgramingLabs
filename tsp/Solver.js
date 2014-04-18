@@ -2,7 +2,7 @@ var fs = require('fs');
 var path = require('path');
 var events = require("events");
 var printResult = require("./printResult");
-var alogirtm = require("./algorithms/closest");
+var alogirtm = require("./algorithms/nopt");
 //var alogirtmOptimal = require("./algorithms/own_solution_1");
 //var alogirtm = require("./algorithms/simple_1");
 
@@ -31,8 +31,8 @@ var readFile = fs.readFileSync(fileName, { encoding: 'utf8' })
     } else {
       points.push({
         index    : index,
-        x        : parseInt(parts[0]),
-        y        : parseInt(parts[1]),
+        x        : parseFloat(parts[0]),
+        y        : parseFloat(parts[1]),
         selected : false
       });
       
